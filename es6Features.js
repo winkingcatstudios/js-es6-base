@@ -1,8 +1,8 @@
 // let and const, var is never needed
-const myName = 'Dan'
+const myName = 'Dan';
 console.log(myName);
 
-let myFaveBand = 'Stevie Wonder'
+let myFaveBand = 'Stevie Wonder';
 console.log(myFaveBand);
 
 
@@ -10,22 +10,22 @@ console.log(myFaveBand);
 // 'this' keeps context more consistently
 function discoveredRadioDept() {
     myFaveBand = 'Radio Dept'
-}
+};
 
 const discRadioDept = () => {
     myFaveBand = 'Radio Dept'
-}
+};
 
 const printMyName = myName => console.log(myName);
 
 
 const printNameAndBand = (myName, myFaveBand) => {
     console.log(myName + ' likes ' + myFaveBand);
-}
+};
 
 
 // // modularity, export
-// export default myFaveBand
+// export default myFaveBand;
 
 
 // classes, blueprints for JS objects
@@ -37,7 +37,7 @@ class Human {
     printGender() {
         console.log(this.gender);
     }
-}
+};
 
 class Person extends Human {
     constructor() {
@@ -48,7 +48,7 @@ class Person extends Human {
     printPeronName() {
         console.log(this.name)
     }
-}
+};
 
 const person = new Person();
 person.printPeronName();
@@ -60,30 +60,30 @@ class Humans {
     gender = 'Non-binary'
 
     printGender = () => console.log(this.gender);
-}   
+}; 
 
 class People extends Humans {
     name = 'Dan';
     
     printPeronName = () => console.log(this.name);
-}
+};
 
 
 // spread operator
 // add properties while safely copying old array/object
-const oldNums = [ 1, 2, 3 ]
-const newNums = [...oldNums, 4]
+const oldNums = [ 1, 2, 3 ];
+const newNums = [...oldNums, 4];
 
 console.log(newNums);
 
 const dan = {
     isHeDan: 'yes'
-}
+};
 
 const danPlus = {
     ...dan,
     howDanIsHe: "very"
-}
+};
 
 console.log(danPlus);
 
@@ -95,5 +95,8 @@ const filter = (...args) => args.filter(el => el === 1);
 console.log(filter(1,2,3));
 
 
-// destructing
+// destructuring
+// extract array els or object props and store them in vars
+const cats = ['boris', 'pickles', 'fil'];
+[cat1, cat2] = cats;
 
