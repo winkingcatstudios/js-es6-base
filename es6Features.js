@@ -1,9 +1,9 @@
 // let and const, var is never needed
 const myName = 'Dan'
-console.log(myName)
+console.log(myName);
 
 let myFaveBand = 'Stevie Wonder'
-console.log(myFaveBand)
+console.log(myFaveBand);
 
 
 // arrow functions with various syntaxes
@@ -16,16 +16,16 @@ const discRadioDept = () => {
     myFaveBand = 'Radio Dept'
 }
 
-const printMyName = myName => console.log(myName)
+const printMyName = myName => console.log(myName);
 
 
 const printNameAndBand = (myName, myFaveBand) => {
-    console.log(myName + ' likes ' + myFaveBand)
+    console.log(myName + ' likes ' + myFaveBand);
 }
 
 
-// modularity, export
-export default myFaveBand
+// // modularity, export
+// export default myFaveBand
 
 
 // classes, blueprints for JS objects
@@ -65,9 +65,35 @@ class Humans {
 class People extends Humans {
     name = 'Dan';
     
-    printPeronName = () => console.log(this.name)
+    printPeronName = () => console.log(this.name);
 }
 
 
-// spread and rest operator
+// spread operator
+// add properties while safely copying old array/object
+const oldNums = [ 1, 2, 3 ]
+const newNums = [...oldNums, 4]
+
+console.log(newNums);
+
+const dan = {
+    isHeDan: 'yes'
+}
+
+const danPlus = {
+    ...dan,
+    howDanIsHe: "very"
+}
+
+console.log(danPlus);
+
+
+// rest operator
+// user on functions like spread
+const filter = (...args) => args.filter(el => el === 1);
+
+console.log(filter(1,2,3));
+
+
+// destructing
 
